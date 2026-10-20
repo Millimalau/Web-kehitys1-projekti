@@ -26,9 +26,9 @@ Esimerkki kuvan lisäämisestä:
 
 ## Verkkolinkit
 
-- **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
-- **GitHub-repositorio:** [Lisää tähän repositorion osoite](https://github.com/yourusername/your-repository)
-- **Projektin videoesittely:** [Lisää tähän videon osoite](https://example.com/)
+- **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite]https://millimalau.github.io/Web-kehitys1-projekti/
+- **GitHub-repositorio:** [Lisää tähän repositorion osoite] https://github.com/Millimalau/Web-kehitys1-projekti.git
+- **Projektin videoesittely:** [Lisää tähän videon osoite](https://www.loom.com/share/6387dbacc88d46b09e9dcd46030fb796)
 
 ## Tietoja sovelluksesta
 
