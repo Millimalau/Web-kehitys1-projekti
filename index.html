@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listasovellus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="app-header">
+      <input type="text" id="list-name" class="list-name" placeholder="Listan nimi" autocomplete="off" aria-label="Listan nimi">
+      <p class="error-message" id="name-error" aria-live="polite"></p>
+      <span id="counter" class="counter"></span>
+    </header>
+
+    <form id="item-form" class="item-form" novalidate>
+      <div class="form-row">
+        <input type="text" id="item-input" placeholder="Muistiinpano..." autocomplete="off" aria-label="Uusi kohta">
+        <button type="submit" class="add-button" aria-label="Lisää kohta">+</button>
+      </div>
+      <p class="error-message" id="item-error" aria-live="polite"></p>
+    </form>
+
+    <main class="list-area">
+      <ul id="item-list" class="item-list"></ul>
+      <p id="empty-message" class="empty-message">Lista on tyhjä.</p>
+
+      <section id="saved-panel" class="saved-panel hidden" aria-label="Tallennetut listat">
+        <h2>Tallennetut listat</h2>
+        <ul id="saved-list" class="saved-list"></ul>
+        <p id="saved-empty" class="empty-message">Ei tallennettuja listoja.</p>
+      </section>
+    </main>
+
+    <nav class="navbar" aria-label="Listan toiminnot">
+      <button type="button" id="btn-lists" aria-expanded="false">Listat</button>
+      <button type="button" id="btn-new">Uusi lista</button>
+      <button type="button" id="btn-save">Tallenna</button>
+      <button type="button" id="btn-clear" class="danger">Tyhjennä</button>
+    </nav>
+
+    <div id="popup" class="popup" role="status" aria-live="polite"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

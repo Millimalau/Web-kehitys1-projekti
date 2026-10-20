@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #0b0b0d;
+  color: #f2f2f7;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------- pohja ---------- */
+
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  height: min(86vh, 720px);
+  background: #1c1c1e;
+  border: 1px solid #2c2c2e;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Otsikko ---------- */
+
+.app-header {
+  padding: 1.1rem 1.1rem 0.5rem;
+}
+
+.list-name {
+  width: 100%;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.3rem 0.4rem;
+  margin-left: -0.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0ee2f1;
+  outline: none;
+}
+
+.list-name::placeholder {
+  color: #48484a;
+}
+
+.list-name:focus {
+  border-color: #2c2c2e;
+}
+
+.counter {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.85rem;
+  color: #8e8e93;
+}
+
+/* ---------- Lomake ---------- */
+
+.item-form {
+  padding: 0.5rem 1.1rem 0.75rem;
+  border-bottom: 1px solid #2c2c2e;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  font-family: inherit;
+}
+
+#item-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.65rem 0.8rem;
+  font-size: 1rem;
+  color: #f2f2f7;
+  background: #2c2c2e;
+  border: 2px solid #3a3a3c;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+#item-input:focus {
+  border-color: #0ee2f1
+}
+
+.add-button {
+  width: 46px;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #1102e0;
+  background: #0ee2f1
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: #0ee2f1
+}
+
+/* Virheellisen kentän korostus */
+input.invalid {
+  border-color: #ff453a !important;
+  background: #3a1f1f !important;
+}
+
+.error-message {
+  min-height: 1.1em;
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: #ff453a;
+}
+
+/* ---------- Lista ---------- */
+
+.list-area {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.25rem 1.1rem;
+}
+
+.item-list,
+.saved-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  border-bottom: 1px solid #2c2c2e;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+}
+
+/* Pallukka: väri tulee muuttujasta --c */
+.circle {
+  flex-shrink: 0;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: transparent;
+  border: 2px solid var(--c);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.item.done .circle {
+  background: var(--c);
+}
+
+.item.done .circle::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.item-text {
+  flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.item.done .item-text {
+  text-decoration: line-through;
+  color: #636366;
+}
+
+.icon-button {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #8e8e93;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.icon-button:hover {
+  background: #2c2c2e;
+  color: #ff453a;
+}
+
+.color-button::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0 auto;
+  background: var(--c);
+  border-radius: 50%;
+}
+
+.color-button:hover {
+  background: #2c2c2e;
+}
+
+.palette {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0 0 0.75rem 2.2rem;
+}
+
+.swatch {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: var(--c);
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swatch.selected {
+  border-color: #fff;
+}
+
+.empty-message {
+  margin: 2rem 0;
+  text-align: center;
+  color: #8e8e93;
+}
+
+
+/* ---------- Navbar----- */
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #2c2c2e;
+  border-top: 1px solid #2c2c2e;
+}
+
+.navbar button {
+  padding: 0.95rem 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0ae2ff;
+  background: #1c1c1e;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar button:hover,
+.navbar button[aria-expanded="true"] {
+  background: #2c2c2e;
+}
+
+.navbar button.danger {
+  color: #ff453a;
+}
+
+/* ---------- Ponnahdusikkuna ---------- */
+
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%) scale(0.9);
+  padding: 1rem 1.6rem;
+  background: #3a3a3c;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hidden {
+  display: none !important;
+}
