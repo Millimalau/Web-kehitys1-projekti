@@ -64,7 +64,7 @@ Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksestasi.
 
 Esimerkki kuvan lisäämisestä:
 
-![Kuvakaappaus sovelluksesta](img/screenshot.png)
+![Kuvakaappaus sovelluksesta](img/Sovellus.png)
 
 ## Tunnetut virheet / puutteet
 
@@ -83,6 +83,8 @@ Pohdi työtäsi ja oppimisprosessiasi.
 - Mitä opin HTML:stä, CSS:stä, JavaScriptistä ja DOM-skriptauksesta?
 - Mikä jäi epäselväksi tai mistä haluaisin oppia lisää?
 - Oma arvio projektista: **xx/10 pistettä**
+
+Oppimiskokemus jäi vähän pieneksi. Panos mitä käytin tähän ei ollut iso, Ollaan oltu lapsen kanssa molemmat tässä kipeensä viimeset pari viikkoa, eikä olla päästy kouluun tai päiväkotiin ja monista kursseista tehtävät laahannu. En pstynyt tähänkään käyttää ihan hirveästi resursseja. Turvauduin siis koodien osalta tekoälyn käyttöön. Eniten tärkein eli javascript ja dom-skriptaus jäi vähän epäselväksi. Se miten käytin tekoälyä toki oli paljon sparrailua kyselin millaset ratkaisut parhaita ja kokeilin sen avustuksella joitain toimintoja. Korjailin myös itseä mieleiseksi osia ja tekoäly olisi halunnut tehdä ohjelmasta monimutkaisemman, joten itse yksinkertaistin sovellusta. Harmittaa paljon, että en päässyt itse kunnolla kirjoittamaan koodia ja tekemään täysin itse työm. Olen kuitenkin kiinnostunut aiheesta ja tykkäsin websivu kurssista, mutta aina ei voi mennä ihan nappiin ja joskus täytyy ottaa takkiin. Olen kuitenkin tyytyväinen tohon mitä sain nyt aikaiseksi. Antaisin itselle muuten 10/10 tosta sovellksesta, koska se on juuri sellainen mitä ajattelin, mutta koska en itse käyttänyt niin isoa panosta mitä olisin voinut niin ehkä 7/10 voisi olla ok. 
 
 ## Lähteet ja kiitokset
 
