@@ -189,7 +189,6 @@ input.invalid {
 }
 
 .item.done .item-text {
-  text-decoration: line-through;
   color: #636366;
 }
 

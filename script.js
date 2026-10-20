@@ -169,7 +169,7 @@ function renderItems() {
     circle.type = "button";
     circle.className = "circle";
     circle.setAttribute("aria-pressed", String(item.done));
-    circle.setAttribute("aria-label", "Merkitse kerätyksi: " + item.text);
+    circle.setAttribute("aria-label", "Merkitse tehdyksi: " + item.text);
     circle.addEventListener("click", function () {
       toggleItem(item.id);
     });
@@ -215,7 +215,7 @@ function renderItems() {
     return item.done;
   }).length;
   counter.textContent = list.items.length > 0
-    ? doneCount + " / " + list.items.length + " kerätty"
+    ? doneCount + " / " + list.items.length
     : "";
 }
 
@@ -257,7 +257,7 @@ function renderSaved() {
     }).length;
     const meta = document.createElement("span");
     meta.className = "saved-meta";
-    meta.textContent = doneCount + " / " + list.items.length + " kerätty";
+    meta.textContent = doneCount + " / " + list.items.length + "";
 
     info.appendChild(name);
     info.appendChild(meta);
